@@ -100,40 +100,62 @@ def generate_unique_images(amount, config):
         with open('./metadata/' + str(item["tokenId"]) + '.json', 'w') as outfile:
           json.dump(original_json, outfile, indent=4)
 
-generate_unique_images(11, {
+generate_unique_images(50, {
   "layers": [
     {
+      "name": "Accessory",
+      "values": ["Bat", "Gold Chain", "Gold Rolex", "Intellect Serum", "Mace", "Mage", "Nether Raygun", "Popcorn", "Solana Flag"],
+      "trait_path": "./trait-layers/accessories",
+      "filename": ["bat.preview", "gold-chain.preview", "gold-rolex.preview", "intellect-serum.preview", "mace.preview", "mage.preview", "nether-raygun.preview", "popcorn.preview", "solana-flag.preview"],
+      "weights": [40,10,10,10,10,5,5,5,5]
+    },
+    {
       "name": "Background",
-      "values": ["Blue", "Orange", "Purple", "Red", "Yellow"],
-      "trait_path": "./trait-layers/backgrounds",
-      "filename": ["blue", "orange", "purple", "red", "yellow"],
+      "values": ["Baby Blue", "Capri", "Cotton Candy", "Deep Champagne", "Lavender Blue", "Light Gray", "Magic Mint", "Mauve", "Platinum"],
+      "trait_path": "./trait-layers/background",
+      "filename": ["baby-blue.preview", "capri.preview", "cotton-candy.preview", "deep-champagne.preview", "lavender-blue.preview", "light-gray.preview", "magic-mint.preview", "mauve.preview", "platinum.preview"],
+      "weights": [40,10,10,10,10,5,5,5,5]
+    },
+    {
+      "name": "Clothes",
+      "values": ["Astronaut Suit", "Football Jersey", "Jumpsuit", "Karate", "Mage", "My Name Is", "Police", "Toga", "Trenchcoat"],
+      "trait_path": "./trait-layers/clothes",
+      "filename": ["astronaut-suit.preview", "football-jersey.preview", "jumpsuit.preview", "karate.preview", "mage.preview", "my-name-is.preview", "police.preview", "toga.preview", "trenchcoat.preview"],
+      "weights": [40,10,10,10,10,5,5,5,5]
+    },
+    {
+      "name": "Expression",
+      "values": ["Angry", "Excited", "Neutral", "Smile", "Stupid"],
+      "trait_path": "./trait-layers/expression",
+      "filename": ["angry.preview", "excited.preview", "neutral.preview", "smile.preview", "stupid.preview"],
       "weights": [20,20,20,20,20]
     },
     {
-      "name": "Foreground",
-      "values": ["Python Logo", "Python Logo 32"],
-      "trait_path": "./trait-layers/foreground",
-      "filename": ["logo", "logo"],
-      "weights": [50, 50]
+      "name": "Eyes",
+      "values": ["Angry", "Excited", "Googly", "Neutral", "Smiling", "Stupid"],
+      "trait_path": "./trait-layers/eyes",
+      "filename": ["angry.preview", "excited.preview", "googly.preview", "neutral.preview", "smiling.preview", "stupid.preview"],
+      "weights": [20,20,20,20,10,10]
     },
     {
-      "name": "Branding",
-      "values": ["A Name", "Another Name"],
-      "trait_path": "./trait-layers/text",
-      "filename": ["text", "text"],
-      "weights": [50, 50]
+      "name": "Headgear",
+      "values": ["3D Glasses", "Astronaut Helmet", "Clown", "Dark Prince", "Fedora", "Halo", "Hardhat", "Headphones", "Officer"],
+      "trait_path": "./trait-layers/headgear",
+      "filename": ["3d-glasses.preview", "astronaut-helmet.preview", "clown.preview", "dark-prince.preview", "fedora.preview", "halo.preview", "hardhat.preview", "headphones.preview", "officer.preview"],
+      "weights": [40,10,10,10,10,5,5,5,5]
+    },
+    {
+      "name": "Skin",
+      "values": ["Abstract", "Blue", "Camo Coral", "Camo Hot Pink", "Chrome Turquoise", "Damascus Steel", "Lava", "More Razzle", "Regular"],
+      "trait_path": "./trait-layers/skin",
+      "filename": ["abstract.preview", "blue.preview", "camo-coral.preview", "camo-hot-pink.preview", "chrome-turquoise.preview", "damascus-steel.preview", "lava.preview", "more-razzle.preview", "regular.preview"],
+      "weights": [40,10,10,10,10,5,5,5,5]
     }
   ],
-  "incompatibilities": [
-    {
-      "layer": "Background",
-      "value": "Blue",
-      "incompatible_with": ["Python Logo 2"]
-    },  #  @dev : Blue backgrounds will never have the attribute "Python Logo 2".
-  ],
+  "incompatibilities": [],
   "baseURI": ".",
-  "name": "NFT #",
-  "description": "This is a description for this NFT series."
+  "name": "Snake #",
+  "description": "This is Snake NFT Serie."
 })
 
 #Additional layer objects can be added following the above formats. They will automatically be composed along with the rest of the layers as long as they are the same size as eachother.
