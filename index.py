@@ -103,17 +103,17 @@ def generate_unique_images(amount, config):
 generate_unique_images(50, {
   "layers": [
     {
-      "name": "Accessory",
-      "values": ["Bat", "Gold Chain", "Gold Rolex", "Intellect Serum", "Mace", "Mage", "Nether Raygun", "Popcorn", "Solana Flag"],
-      "trait_path": "./trait-layers/accessories",
-      "filename": ["bat.preview", "gold-chain.preview", "gold-rolex.preview", "intellect-serum.preview", "mace.preview", "mage.preview", "nether-raygun.preview", "popcorn.preview", "solana-flag.preview"],
-      "weights": [40,10,10,10,10,5,5,5,5]
-    },
-    {
       "name": "Background",
       "values": ["Baby Blue", "Capri", "Cotton Candy", "Deep Champagne", "Lavender Blue", "Light Gray", "Magic Mint", "Mauve", "Platinum"],
       "trait_path": "./trait-layers/background",
       "filename": ["baby-blue.preview", "capri.preview", "cotton-candy.preview", "deep-champagne.preview", "lavender-blue.preview", "light-gray.preview", "magic-mint.preview", "mauve.preview", "platinum.preview"],
+      "weights": [40,10,10,10,10,5,5,5,5]
+    },
+    {
+      "name": "Skin",
+      "values": ["Abstract", "Blue", "Camo Coral", "Camo Hot Pink", "Chrome Turquoise", "Damascus Steel", "Lava", "More Razzle", "Regular"],
+      "trait_path": "./trait-layers/skin",
+      "filename": ["abstract.preview", "blue.preview", "camo-coral.preview", "camo-hot-pink.preview", "chrome-turquoise.preview", "damascus-steel.preview", "lava.preview", "more-razzle.preview", "regular.preview"],
       "weights": [40,10,10,10,10,5,5,5,5]
     },
     {
@@ -145,12 +145,12 @@ generate_unique_images(50, {
       "weights": [40,10,10,10,10,5,5,5,5]
     },
     {
-      "name": "Skin",
-      "values": ["Abstract", "Blue", "Camo Coral", "Camo Hot Pink", "Chrome Turquoise", "Damascus Steel", "Lava", "More Razzle", "Regular"],
-      "trait_path": "./trait-layers/skin",
-      "filename": ["abstract.preview", "blue.preview", "camo-coral.preview", "camo-hot-pink.preview", "chrome-turquoise.preview", "damascus-steel.preview", "lava.preview", "more-razzle.preview", "regular.preview"],
+      "name": "Accessory",
+      "values": ["Bat", "Gold Chain", "Gold Rolex", "Intellect Serum", "Mace", "Mage", "Nether Raygun", "Popcorn", "Solana Flag"],
+      "trait_path": "./trait-layers/accessories",
+      "filename": ["bat.preview", "gold-chain.preview", "gold-rolex.preview", "intellect-serum.preview", "mace.preview", "mage.preview", "nether-raygun.preview", "popcorn.preview", "solana-flag.preview"],
       "weights": [40,10,10,10,10,5,5,5,5]
-    }
+    },
   ],
   "incompatibilities": [],
   "baseURI": ".",
